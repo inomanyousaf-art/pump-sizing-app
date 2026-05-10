@@ -18,7 +18,7 @@ from conversions import (
 
 st.set_page_config(page_title="Pump Sizing App", layout="wide")
 
-st.title("🚀 Pump Sizing Dashboard")
+st.title("Pump Sizing")
 
 fitting_types = [
     "Tee Run",
@@ -222,14 +222,14 @@ with tab1:
     suction_elevation_ft = convert_length(suction_elevation_input, length_unit)
 
     st.markdown("---")
-    st.header("Suction Pipe Sections")
+    st.header("Pipe Sections")
 
     suction_sections = []
 
     for i in range(1, 4):
         suction_sections.append(
             section_input(
-                f"Suction Section {i}",
+                f"Section {i}",
                 f"suction_{i}",
                 length_unit
             )
@@ -261,14 +261,14 @@ with tab2:
     )
 
     st.markdown("---")
-    st.header("Discharge Pipe Sections")
+    st.header("Pipe Sections")
 
     discharge_sections = []
 
     for i in range(1, 4):
         discharge_sections.append(
             section_input(
-                f"Discharge Section {i}",
+                f"Section {i}",
                 f"discharge_{i}",
                 length_unit
             )
